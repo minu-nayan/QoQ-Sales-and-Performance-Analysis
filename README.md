@@ -6,7 +6,7 @@
 2. [Business Context](#business-context)
 3. [Data Model & Architecture](#Data-Model--Architecture)
 4. [Key DAX Measures & Calculations](#key-dax-measures--calculations)
-5. [Dashboard Pages & Analytical Focus](#Dashboard-Pages-&-Analytical-Focus)
+5. [Dashboard Pages & Analytical Focus](#Dashboard-Pages--Analytical-Focus)
 6. [Key Analytical Capabilities](#Key-Analytical-Capabilities)
 7. [Data Preparation & Transformations](#Data-Preparation--Transformations)
 8. [Conclusion](#Conclusion)
