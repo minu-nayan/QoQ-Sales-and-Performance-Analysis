@@ -1,14 +1,14 @@
 # QoQ Sales & Performance Analysis (Q1-Q2 2025)
 
-##Table of Contents
+## Table of Contents
 
 1. [Project Overview](#project-overview)
 2. [Business Context](#business-context)
-3. [Data Model & Architecture](#Data-Model-&-Architecture)
-4. [Key DAX Measures & Calculations](#Key-DAX-Measures-&-Calculations)
+3. [Data Model & Architecture](#Data-Model--Architecture)
+4. [Key DAX Measures & Calculations](#key-dax-measures--calculations)
 5. [Dashboard Pages & Analytical Focus](#Dashboard-Pages-&-Analytical-Focus)
 6. [Key Analytical Capabilities](#Key-Analytical-Capabilities)
-7. [Data Preparation & Transformations](#Data-Preparation-&-Transformations)
+7. [Data Preparation & Transformations](#Data-Preparation--Transformations)
 8. [Conclusion](#Conclusion)
 
 ## Project Overview
