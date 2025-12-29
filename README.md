@@ -182,3 +182,8 @@ This project demonstrates a business-first analytics approach powered by:
 The dashboards are optimized for decision support, not just reporting—enabling leadership to quickly identify growth drivers, performance gaps, and revenue concentration across people, services, and time.
 
 Built with: Power BI • DAX • Dimensional Modeling • Business Analytics
+
+### Connect With Me
+
+* **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/minu-nayan/)
+* * **Email:** minunayan08@gmail.com
