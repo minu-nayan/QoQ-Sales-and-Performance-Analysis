@@ -1,8 +1,8 @@
-#QoQ Sales & Performance Analysis (Q1-Q2 2025)
+# QoQ Sales & Performance Analysis (Q1-Q2 2025)
 
 ##Table of Contents
 
-1. [Project Overview](##project-overview)
+1. [Project Overview](#project-overview)
 2. [Business Context](#business-context)
 3. [Data Model & Architecture](#Data-Model-&-Architecture)
 4. [Key DAX Measures & Calculations](#Key-DAX-Measures-&-Calculations)
@@ -11,7 +11,7 @@
 7. [Data Preparation & Transformations](#Data-Preparation-&-Transformations)
 8. [Conclusion](#Conclusion)
 
-##Project Overview
+## Project Overview
 
 This project delivers a Quarter-over-Quarter (QoQ) Sales and Performance Analysis for a B2B SaaS services organization, focusing on revenue performance across service verticals, AI/ML sub-verticals, and Business Development (BD) teams for Q1 and Q2 of 2025.
 
@@ -19,29 +19,29 @@ The dashboards are designed to support revenue leadership, sales operations, and
 
 The solution is built end-to-end in Power BI, with a strong emphasis on data modeling, DAX-driven metrics, and analytical storytelling, rather than static reporting.
 
-##Business Context
+## Business Context
 
 Organization type: SaaS / Service-based B2B company
 Revenue source: Projected contract value derived from B2B service contracts secured by the Business Development team.
 
-####Service verticals:
+#### Service verticals:
 - Data Engineering
 - Full Stack Development
 - Artificial Intelligence (AI/ML)
 - Others
 
-####AI/ML sub-verticals:
+#### AI/ML sub-verticals:
 - Machine Learning
 - AI Agents
 - AI Workflow Automation
 
 Each deal represents projected contract value won by a BD within a specific vertical and time period.
 
-##Data Model & Architecture
+## Data Model & Architecture
 
-###Core Tables
+### Core Tables
 
-####Sales (Fact Table)
+#### Sales (Fact Table)
 - Date Won
 - BD Name
 - Client Name
@@ -51,7 +51,7 @@ Each deal represents projected contract value won by a BD within a specific vert
 - AI/ML Sub-Vertical
 - Projected Contract Value
 
-####DateTable (Calendar Dimension)
+#### DateTable (Calendar Dimension)
 - Date
 - Month Name
 - Month Number
@@ -81,9 +81,9 @@ Relationships
 - Sales[Date Won] → DateTable[Date] (Many-to-One)
 - Time Grain table is intentionally disconnected to enable dynamic axis control
 
-##Key DAX Measures & Calculations
+## Key DAX Measures & Calculations
 
-####Revenue Measures
+#### Revenue Measures
 ````
 Total Revenue =
 SUM('Sales'[Projected Contract Value])
@@ -104,7 +104,7 @@ Total Revenue Q1 Q2 =
 [Q1 Revenue] + [Q2 Revenue]
 ````
 
-####QoQ Growth Calculation
+#### QoQ Growth Calculation
 ````
 QoQ Growth % =
 DIVIDE(
@@ -114,7 +114,7 @@ DIVIDE(
 ````
 Displayed using conditional formatting for directional indicators (▲ / ▼).
 
-####Vertical & Sub-Vertical Attribution
+#### Vertical & Sub-Vertical Attribution
 Revenue is sliced using Project Vertical and AI/ML Sub-Vertical fields directly in visuals, avoiding hard-coded logic and preserving model flexibility.
 
 This enables:
@@ -122,7 +122,7 @@ This enables:
 - Sub-vertical performance inside AI/ML
 - BD-level attribution across service lines
 
-####KPI Text Construction (Concatenated Measures)
+#### KPI Text Construction (Concatenated Measures)
 To avoid redundant visuals and conserve layout space, concatenated text measures are used for KPI cards.
 ````
 Vertical Revenue Summary =
@@ -133,7 +133,7 @@ Vertical Revenue Summary =
 ````
 This approach replaces legends and secondary tables with information-dense KPI cards.
 
-##Dashboard Pages & Analytical Focus
+## Dashboard Pages & Analytical Focus
 
 1. Sales Analytics (Q1–Q2 2025)
 
@@ -152,7 +152,7 @@ Purpose: Executive-level revenue visibility with drill-down capability
 - Revenue by BD across verticals and sub-verticals
 Purpose: BD performance benchmarking and contribution analysis
 
-##Key Analytical Capabilities
+## Key Analytical Capabilities
 
 - Quarter-over-Quarter growth analysis
 - BD-level performance attribution
@@ -161,7 +161,7 @@ Purpose: BD performance benchmarking and contribution analysis
 - Legend-free, label-driven visual design
 - High-density KPI storytelling using DAX
 
-##Data Preparation & Transformations
+## Data Preparation & Transformations
 
 - Calendar table generated using DAX (no auto date/time)
 - Explicit quarter and month mapping
@@ -169,7 +169,7 @@ Purpose: BD performance benchmarking and contribution analysis
 - Standardized revenue formatting and display units
 No assumptions are embedded directly in visuals; all business logic resides in measures.
 
-##Conclusion
+## Conclusion
 
 This project demonstrates a business-first analytics approach powered by:
 - Robust dimensional modeling
