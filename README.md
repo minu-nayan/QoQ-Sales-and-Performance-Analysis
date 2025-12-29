@@ -19,8 +19,6 @@ The dashboards are designed to support revenue leadership, sales operations, and
 
 The solution is built end-to-end in Power BI, with a strong emphasis on data modeling, DAX-driven metrics, and analytical storytelling, rather than static reporting.
 
----
-
 ## Business Context
 
 Organization type: SaaS / Service-based B2B company
