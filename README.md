@@ -185,8 +185,7 @@ Built with: Power BI • DAX • Dimensional Modeling • Business Analytics
 
 ### Connect With Me
 
-* **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/minu-nayan/)
-* **Email:** minunayan08@gmail.com
-<a href="https://www.linkedin.com/in/minu-nayan/" target="_blank">
-  <img src="img.shields.io" alt="LinkedIn Badge"/>
-</a>
+## 🔗 Connect With Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/minu-nayan/)
+[![Email](https://img.shields.io/badge/Email-Contact-red?logo=gmail)](mailto:minunayan08@gmail.com)
