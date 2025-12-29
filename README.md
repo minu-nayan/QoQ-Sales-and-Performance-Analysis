@@ -2,7 +2,7 @@
 
 ##Table of Contents
 
-1. [Project Overview](#project-overview)
+1. [Project Overview](##project-overview)
 2. [Business Context](#business-context)
 3. [Data Model & Architecture](#Data-Model-&-Architecture)
 4. [Key DAX Measures & Calculations](#Key-DAX-Measures-&-Calculations)
