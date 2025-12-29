@@ -186,4 +186,4 @@ Built with: Power BI • DAX • Dimensional Modeling • Business Analytics
 ### Connect With Me
 
 * **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/minu-nayan/)
-* * **Email:** minunayan08@gmail.com
+* **Email:** minunayan08@gmail.com
