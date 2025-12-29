@@ -1,2 +1,182 @@
-# QoQ-Sales-and-Performance-Analysis
-Q1/Q2 Sales dashboard with BD performance, Sales per tech vertical breakdowns (and sub-verticals), QoQ analysis, and KPIs (Projected Revenue from Sales / Cost / Profit). 
+#QoQ Sales & Performance Analysis (Q1-Q2 2025)
+
+##Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Business Context](#business-context)
+3. [Data Model & Architecture](#Data-Model-&-Architecture)
+4. [Key DAX Measures & Calculations](#Key-DAX-Measures-&-Calculations)
+5. [Dashboard Pages & Analytical Focus](#Dashboard-Pages-&-Analytical-Focus)
+6. [Key Analytical Capabilities](#Key-Analytical-Capabilities)
+7. [Data Preparation & Transformations](#Data-Preparation-&-Transformations)
+8. [Conclusion](#Conclusion)
+
+##Project Overview
+
+This project delivers a Quarter-over-Quarter (QoQ) Sales and Performance Analysis for a B2B SaaS services organization, focusing on revenue performance across service verticals, AI/ML sub-verticals, and Business Development (BD) teams for Q1 and Q2 of 2025.
+
+The dashboards are designed to support revenue leadership, sales operations, and business analytics teams by enabling granular performance comparisons, revenue attribution, and trend analysis across time, people, and service offerings.
+
+The solution is built end-to-end in Power BI, with a strong emphasis on data modeling, DAX-driven metrics, and analytical storytelling, rather than static reporting.
+
+##Business Context
+
+Organization type: SaaS / Service-based B2B company
+Revenue source: Projected contract value derived from B2B service contracts secured by the Business Development team.
+
+####Service verticals:
+- Data Engineering
+- Full Stack Development
+- Artificial Intelligence (AI/ML)
+- Others
+
+####AI/ML sub-verticals:
+- Machine Learning
+- AI Agents
+- AI Workflow Automation
+
+Each deal represents projected contract value won by a BD within a specific vertical and time period.
+
+##Data Model & Architecture
+
+###Core Tables
+
+####Sales (Fact Table)
+- Date Won
+- BD Name
+- Client Name
+- Geography (City, State, Country)
+- Industry
+- Project Vertical
+- AI/ML Sub-Vertical
+- Projected Contract Value
+
+####DateTable (Calendar Dimension)
+- Date
+- Month Name
+- Month Number
+- Quarter Name
+- Year
+
+Created using:
+
+````
+DateTable =
+CALENDAR (
+    MIN('Sales'[Date Won]),
+    MAX('Sales'[Date Won])
+)
+````
+
+Time Grain (Disconnected Parameter Table) Used to dynamically switch between Month-level and Quarter-level analysis.
+````
+Time Grain = {
+    ("MonthName", NAMEOF('DateTable'[MonthName]), 0),
+    ("QuarterName", NAMEOF('DateTable'[QuarterName]), 1)
+}
+````
+
+Relationships
+
+- Sales[Date Won] → DateTable[Date] (Many-to-One)
+- Time Grain table is intentionally disconnected to enable dynamic axis control
+
+##Key DAX Measures & Calculations
+
+####Revenue Measures
+````
+Total Revenue =
+SUM('Sales'[Projected Contract Value])
+
+Q1 Revenue =
+CALCULATE(
+    [Total Revenue],
+    'DateTable'[QuarterName] = "Q1"
+)
+
+Q2 Revenue =
+CALCULATE(
+    [Total Revenue],
+    'DateTable'[QuarterName] = "Q2"
+)
+
+Total Revenue Q1 Q2 =
+[Q1 Revenue] + [Q2 Revenue]
+````
+
+####QoQ Growth Calculation
+````
+QoQ Growth % =
+DIVIDE(
+    [Q2 Revenue] - [Q1 Revenue],
+    [Q1 Revenue]
+)
+````
+Displayed using conditional formatting for directional indicators (▲ / ▼).
+
+####Vertical & Sub-Vertical Attribution
+Revenue is sliced using Project Vertical and AI/ML Sub-Vertical fields directly in visuals, avoiding hard-coded logic and preserving model flexibility.
+
+This enables:
+- Vertical-wise revenue contribution
+- Sub-vertical performance inside AI/ML
+- BD-level attribution across service lines
+
+####KPI Text Construction (Concatenated Measures)
+To avoid redundant visuals and conserve layout space, concatenated text measures are used for KPI cards.
+````
+Vertical Revenue Summary =
+"Full Stack Q1 & Q2 Revenue - " & FORMAT([Full Stack Revenue], "$#,##0") & UNICHAR(10) &
+"Data Engineering Q1 & Q2 Revenue - " & FORMAT([Data Engineering Revenue], "$#,##0") & UNICHAR(10) &
+"Others Q1 & Q2 Revenue - " & FORMAT([Others Revenue], "$#,##0") & UNICHAR(10) &
+"AI/ML Q1 & Q2 Revenue - " & FORMAT([AI ML Revenue], "$#,##0")
+````
+This approach replaces legends and secondary tables with information-dense KPI cards.
+
+##Dashboard Pages & Analytical Focus
+
+1. Sales Analytics (Q1–Q2 2025)
+
+- Total revenue, cost, and profit KPIs
+- Vertical-wise revenue contribution
+- Monthly revenue trends
+- Industry-wise revenue distribution
+- AI/ML sub-vertical breakdown
+Purpose: Executive-level revenue visibility with drill-down capability
+
+2. Performance Analytics (Q1–Q2 2025)
+
+- QoQ growth by BD
+- Quarterly revenue comparison (Q1 vs Q2)
+- Leads won per BD
+- Revenue by BD across verticals and sub-verticals
+Purpose: BD performance benchmarking and contribution analysis
+
+##Key Analytical Capabilities
+
+- Quarter-over-Quarter growth analysis
+- BD-level performance attribution
+- Vertical and sub-vertical revenue decomposition
+- Dynamic time grain switching (Month ↔ Quarter)
+- Legend-free, label-driven visual design
+- High-density KPI storytelling using DAX
+
+##Data Preparation & Transformations
+
+- Calendar table generated using DAX (no auto date/time)
+- Explicit quarter and month mapping
+- Clean categorical separation between verticals and sub-verticals
+- Standardized revenue formatting and display units
+No assumptions are embedded directly in visuals; all business logic resides in measures.
+
+##Conclusion
+
+This project demonstrates a business-first analytics approach powered by:
+- Robust dimensional modeling
+- Explicit DAX-driven metric design
+- Thoughtful visual composition
+- Strong alignment with SaaS B2B revenue workflows
+
+The dashboards are optimized for decision support, not just reporting—enabling leadership to quickly identify growth drivers, performance gaps, and revenue concentration across people, services, and time.
+
+Built with: Power BI • DAX • Dimensional Modeling • Business Analytics
