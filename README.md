@@ -136,21 +136,21 @@ This approach replaces legends and secondary tables with information-dense KPI c
 ## Dashboard Pages & Analytical Focus
 
 1. Sales Analytics (Q1–Q2 2025)
-
 - Total revenue, cost, and profit KPIs
 - Vertical-wise revenue contribution
 - Monthly revenue trends
 - Industry-wise revenue distribution
 - AI/ML sub-vertical breakdown
 Purpose: Executive-level revenue visibility with drill-down capability
-
+[Dashboard Preview](https://github.com/minu-nayan/QoQ-Sales-and-Performance-Analysis/blob/main/Sales%20Analytics%20SS%201.png)
+  
 2. Performance Analytics (Q1–Q2 2025)
-
 - QoQ growth by BD
 - Quarterly revenue comparison (Q1 vs Q2)
 - Leads won per BD
 - Revenue by BD across verticals and sub-verticals
 Purpose: BD performance benchmarking and contribution analysis
+![Dashboard Preview](https://github.com/minu-nayan/QoQ-Sales-and-Performance-Analysis/blob/main/Sales%20Performance%20Analytics%20SS%201.png)
 
 ## Key Analytical Capabilities
 
