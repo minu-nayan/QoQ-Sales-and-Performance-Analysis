@@ -183,8 +183,6 @@ The dashboards are optimized for decision support, not just reporting—enabling
 
 Built with: Power BI • DAX • Dimensional Modeling • Business Analytics
 
-### Connect With Me
-
 ## 🔗 Connect With Me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/minu-nayan/)
