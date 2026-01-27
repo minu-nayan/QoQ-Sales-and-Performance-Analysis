@@ -9,7 +9,8 @@
 5. [Dashboard Pages & Analytical Focus](#Dashboard-Pages--Analytical-Focus)
 6. [Key Analytical Capabilities](#Key-Analytical-Capabilities)
 7. [Data Preparation & Transformations](#Data-Preparation--Transformations)
-8. [Conclusion](#Conclusion)
+8. [Key Strategic Insights](#StrategicInsights)
+9. [Conclusion](#Conclusion)
 
 ## Project Overview
 
@@ -171,6 +172,34 @@ Purpose: BD performance benchmarking and contribution analysis
 - Standardized revenue formatting and display units
 No assumptions are embedded directly in visuals; all business logic resides in measures.
 
+## Strategic Insights
+
+- Sales Momentum Strengthened in Q2 (+66% QoQ):
+  Qoq growth indicates improved conversion efficiency, stronger deal closures, or enhanced market positioning entering Q2.
+
+- Full Stack & Data Engineering Drive Majority of Revenue:
+  These two verticals collectively form the largest revenue contribution and remain the dominant core offerings with the highest close value per deal.
+
+- AI/ML Sub-Verticals Show High Upside Potential:
+  Machine Learning represents the strongest sub-vertical, followed by AI Agents and Workflow Automation - suggesting a growing tech trend that could be scaled further in BD outreach.
+
+- BD Performance is Uneven but Q2 Lift Visible Across All Reps:
+  Each BD improved QoQ revenue performance, with BD-A delivering the highest revenue and BD-B/B-C showing competitive growth, reducing performance disparity across the team.
+
+- Industry Spread Shows Deep Penetration in PropTech & EdTech:
+  Top two industries indicate where buyer demand is currently highest; additional vertical diversification is visible but smaller in scale.
+
+- Deal Velocity Improved Monthly (Q2 Slope Stronger than Q1):
+  Monthly close rate spiked notably in April, signaling the presence of seasonality or successful campaigns in targeted periods.
+
+- Cost Structure Light Relative to Revenue:
+  With Cost = $3K vs. $250K total revenue, margins are extremely favorable, reinforcing the scalability of service-based SaaS sales operations.
+
+- Sales Strategy Implication:
+  Double-down on ML/AI & Full Stack verticals, replicate Q2 BD execution patterns, and expand industry penetration beyond PropTech/EdTech using insights from high-performing quarters.
+
+The dashboards are optimized for decision support, not just reporting-enabling leadership to quickly identify growth drivers, performance gaps, and revenue concentration across people, services, and time.
+
 ## Conclusion
 
 This project demonstrates a business-first analytics approach powered by:
@@ -178,8 +207,6 @@ This project demonstrates a business-first analytics approach powered by:
 - Explicit DAX-driven metric design
 - Thoughtful visual composition
 - Strong alignment with SaaS B2B revenue workflows
-
-The dashboards are optimized for decision support, not just reporting—enabling leadership to quickly identify growth drivers, performance gaps, and revenue concentration across people, services, and time.
 
 Built with: Power BI • DAX • Dimensional Modeling • Business Analytics
 
