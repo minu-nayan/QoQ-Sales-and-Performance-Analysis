@@ -198,7 +198,7 @@ No assumptions are embedded directly in visuals; all business logic resides in m
 - Sales Strategy Implication:
   Double-down on ML/AI & Full Stack verticals, replicate Q2 BD execution patterns, and expand industry penetration beyond PropTech/EdTech using insights from high-performing quarters.
 
-The dashboards are optimized for decision support, not just reporting-enabling leadership to quickly identify growth drivers, performance gaps, and revenue concentration across people, services, and time.
+The dashboards are optimized for decision support, not just reporting; enabling leadership to quickly identify growth drivers, performance gaps, and revenue concentration across people, services, and time.
 
 ## Conclusion
 
