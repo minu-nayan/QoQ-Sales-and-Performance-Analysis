@@ -9,7 +9,7 @@
 5. [Dashboard Pages & Analytical Focus](#Dashboard-Pages--Analytical-Focus)
 6. [Key Analytical Capabilities](#Key-Analytical-Capabilities)
 7. [Data Preparation & Transformations](#Data-Preparation--Transformations)
-8. [Key Strategic Insights](#StrategicInsights)
+8. [Strategic Insights](#Strategic-Insights)
 9. [Conclusion](#Conclusion)
 
 ## Project Overview
